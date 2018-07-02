@@ -1,0 +1,49 @@
+ALTER TABLE projects
+ADD FOREIGN KEY (cd_user) REFERENCES users(id)
+ON DELETE CASCADE;
+
+ALTER TABLE projects
+ADD FOREIGN KEY (cd_category) REFERENCES categories(id)
+ON DELETE CASCADE;
+
+ALTER TABLE comments
+ADD FOREIGN KEY (cd_user) REFERENCES users(id)
+ON DELETE CASCADE;
+
+ALTER TABLE comments
+ADD FOREIGN KEY (cd_project) REFERENCES projects(id)
+ON DELETE CASCADE;
+
+ALTER TABLE tags_projects
+ADD FOREIGN KEY (cd_project) REFERENCES projects(id)
+ON DELETE CASCADE;
+
+ALTER TABLE tags_projects
+ADD FOREIGN KEY (cd_tag) REFERENCES tags(id)                                                            
+ON DELETE CASCADE;
+
+ALTER TABLE rewards
+ADD FOREIGN KEY (cd_project) REFERENCES projects(id)                                                            
+ON DELETE CASCADE;
+
+ALTER TABLE financing
+ADD FOREIGN KEY (cd_project) REFERENCES projects(id)                                                            
+ON DELETE CASCADE;
+
+ALTER TABLE financing
+ADD FOREIGN KEY (cd_user) REFERENCES users(id)                                                            
+ON DELETE CASCADE;
+
+ALTER TABLE coauthors
+ADD FOREIGN KEY (cd_project) REFERENCES projects(id)                                                            
+ON DELETE CASCADE;
+
+ALTER TABLE coauthors
+ADD FOREIGN KEY (cd_author) REFERENCES users(id)                                                            
+ON DELETE CASCADE;
+
+ALTER TABLE coauthors
+ADD FOREIGN KEY (cd_coauthor) REFERENCES users(id)                                                            
+ON DELETE CASCADE;
+
+CREATE TYPE paymethod AS ENUM ('boleto', 'credcard');

@@ -1,0 +1,31 @@
+{
+  "name": "talaka-node",
+  "version": "1.0.0",
+  "description": "Talaka node.js version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gmastersupreme@bitbucket.org/gmastersupreme/talaka-node.git"
+  },
+  "keywords": [
+    "talaka"
+  ],
+  "author": "Talaka Team (Gustavo R., Jose L. Lucas T.)",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/gmastersupreme/talaka-node#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bookshelf": "^0.13.3",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
+    "knex": "^0.14.6",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.1",
+    "morgan": "^1.9.0",
+    "url": "^0.11.0",
+    "when": "^3.7.8"
+  }
+}
